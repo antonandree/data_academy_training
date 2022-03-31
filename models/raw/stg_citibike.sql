@@ -1,3 +1,10 @@
+{{
+    config(
+        materialized='table',
+        schema='base'
+    )
+}}
+
 select
     f.value:num_bikes_disabled::int as num_bikes_disabled,
     f.value:num_docks_available::int as num_docks_available,
