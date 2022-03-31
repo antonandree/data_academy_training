@@ -1,3 +1,10 @@
+{{
+    config(
+        materialized='view',
+        schema='base'
+    )
+}}
+
 select
     f.value:station_type::string as station_type,
     f.value:electric_bike_surcharge_waiver::boolean electric_bike_surcharge_waiver,
@@ -12,4 +19,4 @@ select
     f.value:lon::float as lon,
     f.value:eightd_has_key_dispenser::boolean as eightd_has_key_dispenser,
     f.value:name::string as name
-from {{ source('citi_bike', 'landing_table_2') }}, table(flatten(v:data:stations)) f;
+from {{ source('citi_bike', 'landing_table_2') }}, table(flatten(v:data:stations)) f

@@ -11,4 +11,4 @@ select
     f.value:num_docks_disabled::int num_docks_disabled,
     f.value:last_reported::int last_reported,
     f.value:is_renting::int as is_renting
-from {{ source('citi_bike', 'landing_table') }}, table(flatten(v:data:stations)) f;
+from {{ source('citi_bike', 'landing_table') }}, table(flatten(v:data:stations)) f
