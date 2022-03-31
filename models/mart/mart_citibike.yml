@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: citi_bike
+    database: citibike_anton
+    schema: raw_base
+    tables:
+      - name: citibike_live_flatten
