@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: citi_bike
+    database: citibike_anton
+    schema: raw
+    tables:
+      - name: landing_table
+      - name: landing_table_2
