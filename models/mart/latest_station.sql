@@ -1,4 +1,7 @@
 SELECT st.station_id,
+    st.lat as latitud,
+    st.lon as longitud,
+    st.name as address_name,
     li.last_reported,
     li.num_docks_available,
     li.station_status,
